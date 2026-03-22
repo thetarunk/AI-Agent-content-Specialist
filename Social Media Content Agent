@@ -46,17 +46,12 @@ The system:
 ## **Workflow Architecture**
 
 ```
-Scheduler
-   ↓
-News Source / RSS Feed
-   ↓
-Gemini AI (Content Generation)
-   ↓
-Parse Structured Output
-   ↓
-Generate Image Prompt
-   ↓
-Send Email (Content Pack)
+Webhook → Gemini (Browse Latest News)
+→ Tools (format text)
+→ Parse JSON
+→ Gemini (Reel Script)
+→ Gemini (LinkedIn Post)
+→ Gmail (Send Email)
 ```
 
 ---
